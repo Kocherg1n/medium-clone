@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abf4f5c7-893b-429a-8eb6-5fb40eb1d6a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authentication/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +70,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605639220783</updated>
-      <workItem from="1605639222312" duration="4080000" />
+      <workItem from="1605639222312" duration="9635000" />
+      <workItem from="1605720650652" duration="6828000" />
     </task>
     <servers />
   </component>
@@ -86,26 +79,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1659" height="153" key="GridCell.Tab.0.bottom" timestamp="1605644314690">
+    <state width="1659" height="153" key="GridCell.Tab.0.bottom" timestamp="1605720726064">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="153" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1605644314690" />
-    <state width="1659" height="153" key="GridCell.Tab.0.center" timestamp="1605644314689">
+    <state width="1659" height="153" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1605720726064" />
+    <state width="1659" height="153" key="GridCell.Tab.0.center" timestamp="1605720726063">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="153" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1605644314689" />
-    <state width="1659" height="153" key="GridCell.Tab.0.left" timestamp="1605644314688">
+    <state width="1659" height="153" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1605720726063" />
+    <state width="1659" height="153" key="GridCell.Tab.0.left" timestamp="1605720726062">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="153" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1605644314688" />
-    <state width="1659" height="153" key="GridCell.Tab.0.right" timestamp="1605644314689">
+    <state width="1659" height="153" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1605720726062" />
+    <state width="1659" height="153" key="GridCell.Tab.0.right" timestamp="1605720726063">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="153" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1605644314689" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1605643840228">
+    <state width="1659" height="153" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1605720726063" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1605735286242">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1605643840228" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1605735286242" />
+    <state x="421" y="250" width="837" height="550" key="find.popup" timestamp="1605653565629">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="421" y="250" width="837" height="550" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605653565629" />
     <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1605640811689">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
