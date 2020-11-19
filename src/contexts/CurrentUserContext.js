@@ -1,7 +1,7 @@
-import React, {createContext, useState} from 'react';
+import {createContext} from "react";
+import React, {useState} from "react";
 
-export const CurrentUserContext = createContext([{}, () => {
-}]);
+export const CurrentUserContext = createContext([{}, () => {}]);
 
 export const CurrentUserProvider = ({children}) => {
   const [state, setState] = useState({
@@ -10,5 +10,10 @@ export const CurrentUserProvider = ({children}) => {
     currentUser: null
   });
 
-  return <CurrentUserContext.Provider value={[state, setState]}>{children}</CurrentUserContext.Provider>
+  window.store = state;
+
+  return <CurrentUserContext.Provider value={[state, setState]}>
+          {children}
+        </CurrentUserContext.Provider>
 };
+

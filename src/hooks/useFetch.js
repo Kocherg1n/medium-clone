@@ -1,30 +1,38 @@
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import axios from "axios";
+import useLocalStorage from "./useLocalStorage";
 
 const useFetch = url => {
   const _baseUrl = 'https://conduit.productionready.io/api';
+
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   const [options, setOptions] = useState({});
+  const [token] = useLocalStorage('Token');
 
-  const doFetch = (options = {}) => {
-    setOptions(options)
+  const doFetch = useCallback((options = {}) => {
+    setOptions(options);
     setIsLoading(true);
-  };
+  }, [])
 
   useEffect(() => {
+    const requestOptions = {
+      ...options,
+      headers: {
+        authorization: token ? `Token ${token}` : ''
+      }
+    };
     if (!isLoading) {
       return
     }
 
-    axios(`${_baseUrl}${url}`, options)
+    axios(`${_baseUrl}${url}`, requestOptions)
       .then(res => {
         setResponse(res.data);
         setIsLoading(false);
       })
       .catch(err => {
-        console.log(err.response.data)
         setError(err.response.data);
         setIsLoading(false);
       })
