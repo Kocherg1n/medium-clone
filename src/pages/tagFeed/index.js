@@ -4,11 +4,8 @@ import Feed from "../../components/Feed";
 import Pagination from "../../components/Pagination";
 import {getPaginator, limit} from "../../utils";
 import FeedToggler from "../../components/FeedToggler";
-import PopularTags from "../../components/PopularTags";
-import Loading from "../../components/Loading";
-import Error from "../../components/Error";
 
-const GlobalFeed = ({location}) => {
+const TagFeed = ({location}) => {
   const {currentPage, offset} = getPaginator(location.search);
   const [{isLoading, response, error}, doFetch] = useFetch(`/articles?limit${limit}&offset=${offset}`);
 
@@ -28,17 +25,14 @@ const GlobalFeed = ({location}) => {
         <div className="row">
           <div className="col-md-9">
             <FeedToggler />
-            {isLoading && <Loading/>}
-            {error && <Error/>}
+            {isLoading && <div>Loading...</div>}
+            {error && <div>Some error...</div>}
             {!isLoading && response && (
               <>
                 <Feed articles={response.articles}/>
                 <Pagination currentPage={currentPage} limit={limit} total={response.articlesCount} url="/"/>
               </>
-              )}
-          </div>
-          <div className="col-md-3">
-            <PopularTags/>
+            )}
           </div>
         </div>
       </div>
@@ -46,4 +40,4 @@ const GlobalFeed = ({location}) => {
   )
 };
 
-export default GlobalFeed;
+export default TagFeed;

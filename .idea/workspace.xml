@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="abf4f5c7-893b-429a-8eb6-5fb40eb1d6a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useFetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFetch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authentication/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/globalFeed/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/globalFeed/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <updated>1605639220783</updated>
       <workItem from="1605639222312" duration="9635000" />
       <workItem from="1605720650652" duration="9921000" />
-      <workItem from="1605807088931" duration="11660000" />
+      <workItem from="1605807088931" duration="26272000" />
     </task>
     <servers />
   </component>
@@ -97,17 +97,17 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1659" height="153" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1605825908804" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1605824747150">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1605882965002">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1605824747150" />
-    <state x="421" y="251" width="837" height="550" key="find.popup" timestamp="1605824831615">
+    <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1605882965002" />
+    <state x="421" y="253" width="837" height="550" key="find.popup" timestamp="1605893876622">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="421" y="251" width="837" height="550" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605824831615" />
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1605807257300">
+    <state x="421" y="253" width="837" height="550" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605893876622" />
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1605878260521">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605807257300" />
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605878260521" />
   </component>
 </project>
