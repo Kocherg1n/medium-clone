@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import useFetch from "../../hooks/useFetch";
 import Feed from "../../components/Feed";
 import Pagination from "../../components/Pagination";
@@ -8,20 +8,22 @@ import PopularTags from "../../components/PopularTags";
 import Loading from "../../components/Loading";
 import Error from "../../components/Error";
 import {stringify} from "query-string";
+import {CurrentUserContext} from "../../contexts/CurrentUserContext";
 
-const TagFeed = ({location, match}) => {
+const YourFeed = ({location}) => {
   const {currentPage, offset} = getPaginator(location.search);
-  const tagName = match.params.slug;
+
   const stringifiedParams = stringify({
     limit,
     offset,
-    tag: tagName
   });
-  const [{isLoading, response, error}, doFetch] = useFetch(`/articles?${stringifiedParams}`);
+  const [{isLoading, response, error}, doFetch] = useFetch(`/articles/feed?${stringifiedParams}`);
 
   useEffect(() => {
     doFetch();
-  }, [doFetch, currentPage, tagName]);
+  }, [doFetch, currentPage]);
+
+
 
   return (
     <div className="home-page">
@@ -34,7 +36,7 @@ const TagFeed = ({location, match}) => {
       <div className="container page">
         <div className="row">
           <div className="col-md-9">
-            <FeedToggler tagName={tagName}/>
+            <FeedToggler />
             {isLoading && <Loading/>}
             {error && <Error/>}
             {!isLoading && response && (
@@ -42,10 +44,10 @@ const TagFeed = ({location, match}) => {
                 <Feed articles={response.articles}/>
                 <Pagination currentPage={currentPage} limit={limit} total={response.articlesCount} url="/"/>
               </>
-            )}
+              )}
           </div>
           <div className="col-md-3">
-            <PopularTags tagName={tagName}/>
+            <PopularTags/>
           </div>
         </div>
       </div>
@@ -53,4 +55,4 @@ const TagFeed = ({location, match}) => {
   )
 };
 
-export default TagFeed;
+export default YourFeed;

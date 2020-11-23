@@ -23,19 +23,22 @@ const TopBar = () => {
             <>
               <li className="nav-item">
                 <NavLink to="/articles/new" className="nav-link">
-                  &nbsp; New Post
+                  <i className="ion-compose"></i>
+                  &nbsp;New Article
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/settings" className="nav-link">
+                  <i className="ion-gear-a"></i>
+                  &nbsp;Setting
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to={`/profiles/${currentUser.username}`} className="nav-link">
-                  &nbsp; {currentUser.username}
+                  <img className="user-pic" src={currentUser.image} alt=""/>
+                  &nbsp;{currentUser.username}
                 </NavLink>
               </li>
-              {/*<li className="nav-item">*/}
-              {/*  <NavLink to="/register" className="nav-link">*/}
-              {/*    Setting*/}
-              {/*  </NavLink>*/}
-              {/*</li>*/}
             </>
           )}
           {!isLoggedIn && (

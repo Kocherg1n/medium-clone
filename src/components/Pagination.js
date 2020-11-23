@@ -24,14 +24,11 @@ const Pagination = ({total, limit, url, currentPage}) => {
 
   return (
     <ul className="pagination">
-      {
-        pages.map(page => (
+      {pages.map(page => (
           <PaginationItem currentPage={currentPage} page={page} url={url} key={page}/>
-        ))
-      }
+        ))}
     </ul>
   );
 };
 
 export default Pagination;
-

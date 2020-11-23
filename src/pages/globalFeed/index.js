@@ -33,7 +33,12 @@ const GlobalFeed = ({location}) => {
             {!isLoading && response && (
               <>
                 <Feed articles={response.articles}/>
-                <Pagination currentPage={currentPage} limit={limit} total={response.articlesCount} url="/"/>
+                <Pagination
+                  currentPage={currentPage}
+                  limit={limit}
+                  total={response.articlesCount}
+                  url="/"
+                />
               </>
               )}
           </div>

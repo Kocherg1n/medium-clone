@@ -1,18 +1,22 @@
-import React from 'react';
-import {Link, NavLink} from "react-router-dom";
+import React, {useContext} from 'react';
+import {NavLink} from "react-router-dom";
+import {CurrentUserContext} from "../contexts/CurrentUserContext";
 
 const FeedToggler = ({tagName}) => {
+  const [currentUserState] = useContext(CurrentUserContext);
   return (
     <div className="feed-toggle">
       <ul className="nav nav-pills outline-active">
-        <li className="nav-item">
-          <NavLink to="/feed" className="nav-link">
-            Your feed.
-          </NavLink>
-        </li>
+        {currentUserState.isLoggedIn && (
+          <li className="nav-item">
+            <NavLink to="/feed" className="nav-link">
+              Your feed
+            </NavLink>
+          </li>
+        )}
         <li className="nav-item">
           <NavLink to="/" className="nav-link" exact>
-            Global feed.
+            Global feed
           </NavLink>
         </li>
         {

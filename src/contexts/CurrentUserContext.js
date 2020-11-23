@@ -1,19 +1,49 @@
-import {createContext} from "react";
+import {createContext, useReducer} from "react";
 import React, {useState} from "react";
 
-export const CurrentUserContext = createContext([{}, () => {}]);
+const initialState = {
+  isLoading: false,
+  isLoggedIn: null,
+  currentUser: null
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'LOADING': {
+      return {...state, isLoading: true}
+    }
+    case 'IS_AUTHORIZED': {
+      return {
+        ...state,
+        isLoggedIn: true,
+        isLoading: false,
+        currentUser: action.payload
+      }
+    }
+    case 'SET_UNAUTHORIZED': {
+      return {...state, isLoggedIn: false}
+    }
+    case 'LOGOUT': {
+      return {
+        ...state,
+        isLoggedIn: false,
+        currentUser: null
+      }
+    }
+    default: {
+      return state
+    }
+  }
+};
+
+
+export const CurrentUserContext = createContext();
 
 export const CurrentUserProvider = ({children}) => {
-  const [state, setState] = useState({
-    isLoading: false,
-    isLoggedIn: null,
-    currentUser: null
-  });
+  const value = useReducer(reducer, initialState);
 
-  window.store = state;
-
-  return <CurrentUserContext.Provider value={[state, setState]}>
-          {children}
-        </CurrentUserContext.Provider>
+  return <CurrentUserContext.Provider value={value}>
+    {children}
+  </CurrentUserContext.Provider>
 };
 
